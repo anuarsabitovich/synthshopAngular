@@ -1,0 +1,11 @@
+<div class="product-card" (click)="navigateToProduct()" [appHoverBig]="1.2">
+  <img
+    [src]="'assets/default-product-image.png'"
+    alt="{{ product.name }}"
+    class="product-image"
+  />
+  <h3>{{ product.name }}</h3>
+  <p>{{ product.description | shorten }}</p>
+  <p><strong>Price:</strong> {{ product.price | currency : "USD" }}</p>
+  <button>Add to Cart</button>
+</div>
